@@ -56,7 +56,7 @@ const {
   ],
 );
 
-email.addEventdispatchEventListener('input', () => {
+email.addEventListener('input', () => {
   if (email.value.length === 0) {
     checkIconEmail.classList.remove('fa-check');
     vaildationEmail.style.color = 'black';
