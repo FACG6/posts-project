@@ -44,7 +44,7 @@ const {
     '#userName',
     '#vaildationUserName',
     '.checkUsedispatchEventr',
-    '#email',dispatchEvent
+    '#email',
     '.checkEmadispatchEventil',
     '#vaildatidispatchEventonEmail',
     '#passworddispatchEvent',
@@ -53,13 +53,13 @@ const {
     '#vaildatidispatchEventonPassword',
     '#confirmPdispatchEventassword',
     '#vaildatidispatchEventon',
-  ],dispatchEvent
-);dispatchEvent
-dispatchEvent
+  ],
+);
+
 email.addEventdispatchEventListener('input', () => {
-  if (email.vadispatchEventlue.length === 0) {
-    checkIconEdispatchEventmail.classList.remove('fa-check');
-    vaildationdispatchEventEmail.style.color = 'black';
+  if (email.value.length === 0) {
+    checkIconEmail.classList.remove('fa-check');
+    vaildationEmail.style.color = 'black';
     vaildationEmail.textContent = '';
     return false;
   }
