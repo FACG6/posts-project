@@ -1,0 +1,45 @@
+<header class="header">
+    <nav class="header--nav">
+        <h3 class="header--nav-title">Blog App</h3>
+    </nav>
+</header>
+<main class="main">
+    <section class="main--section">
+        <form class="main--section-form">
+            <label for="userName">
+                <input type="text" name="userName" class="main--section-input" id="userName" placeholder="User Name"
+                    required>
+                <div class="main--section-userVaildation">
+                    <i class="checkUser fas"></i>
+                    <h3 id="vaildationUserName"></h3>
+                </div>
+
+            </label>
+            <label for="email">
+                <input type="email" name="email" class="main--section-input" id="email" placeholder="Email" required>
+                <div class="main--section-userVaildation">
+                    <i class="checkEmail fas"></i>
+                    <h3 id="vaildationEmail"></h3>
+                </div>
+            </label>
+            <label for="password">
+                <input type="password" name="password" class="main--section-input" id="password" placeholder="Password"
+                    required>
+                <div class="passwordMeterGray">
+                    <div class="passwordMeterColor">
+                        <h3 id="vaildationMeterPasswordText"></h3>
+                    </div>
+                </div>
+                <h3 id="vaildationPassword"></h3>
+            </label>
+            <label for="confirmPassword">
+                <input type="password" name="confirmPassword" class="main--section-input" id="confirmPassword"
+                    placeholder="confirm password" required>
+                <h3 id="vaildationConfirmPassword"></h3>
+            </label>
+            <h3 id="vaildation"></h3>
+            <button class="main--section-login">Signup</button>
+            <h3 class="main--section-h3">You have account<a href="/Login" class="main--section-h3-a">Login</a>
+            </h3>
+        </form>
+    </section>

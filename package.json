@@ -1,0 +1,33 @@
+{
+  "name": "reading-week",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test node ./test/testRoutes.js | tap-spec",
+    "start": "NODE_ENV=pro node ./src/index.js",
+    "dev": "nodemon ./src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.4",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "express-validator": "^5.3.1",
+    "jsonwebtoken": "^8.5.0",
+    "pg": "^7.8.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.15.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "nodemon": "^1.18.10",
+    "supertest": "^4.0.0",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.10.1"
+  }
+}
