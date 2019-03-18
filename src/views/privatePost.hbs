@@ -1,0 +1,26 @@
+<header class="header">
+    <nav class="header--nav">
+        <h3 class="header--nav-title">Blog App</h3>
+        <div class="header--nav-user">
+            <h3 class="header--nav-userName">{{userName}}</h3>
+            <button class="header--nav-logout"><a href="/logout" class="header--nav-a">Logout</a></button>
+            <button class="header--nav-home"><a href="/" class="header--nav-a">Home</a></button>
+        </div>
+    </nav>
+</header>
+<main class="main">
+    <section class="main--section">
+        {{#if ruesult}}
+        {{#each ruesult}}
+        <div class="main--section-post">
+            <h1 class="main--section-postOwner">{{../userName}}</h4>
+                <button value="{{postid}}" class="main--section-postDelete">X</button>
+                <h3 class="validationDeletePost"></h3>
+                <p class="main--section-postContent">{{post}}</p>
+        </div>
+        {{/each}}
+        {{else}}
+        <h3 class="main--section-noPost">NO Private Post</h3>
+        {{/if}}
+    </section>
+</main>

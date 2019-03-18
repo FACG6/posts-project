@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>head}}
+    <link rel="stylesheet" href="./css/{{css}}.css">
+</head>
+<body>
+    {{{body}}}
+    <footer class="footer"></footer>
+    {{#if dom}}
+    <script src="./js/{{dom}}.js"></script>
+    {{/if}}
+    {{#if secndryDom}}
+    <script src="./js/{{secndryDom}}.js"></script>
+    {{/if}}
+</body>
+</html>

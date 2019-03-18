@@ -1,0 +1,74 @@
+<header class="header">
+    <nav class="header--nav">
+        <h3 class="header--nav-title">Blog App</h3>
+        {{#if userName}}
+        <div class="header--nav-user">
+            <h3 class="header--nav-userName">{{userName}}</h3>
+            <button class="header--nav-logout"><a href="/logout" class="header--nav-a">Logout</a></button>
+            <button class="header--nav-private"><a href="/privatepost" class="header--nav-a">Private</a></button>
+        </div>
+        {{else}}
+        <div class="header--nav-guest">
+            <button class="header--nav-login" action="/login" method="GET">
+                <a href="/login" class="header--nav-a">Login</a>
+            </button>
+            <button class="header--nav-signup" action="/signup" method="GET">
+                <a href="/signup" class="header--nav-a">Signup</a>
+            </button>
+        </div>
+        {{/if}}
+    </nav>
+</header>
+<main class="main">
+    <section class="main--section">
+        {{#if userName}}
+        <div class="main--section-addPost">
+            <form>
+                <label for="inputPost">
+                    <input id="inputPost" class="main--section-inputPost">
+                </label>
+                <div class="control">
+                    <label for="public" class="radio">
+                        <input id="public" type="radio" name="typePost">
+                        public
+                    </label>
+                    <label for="private" class="radio">
+                        <input id="private" type="radio" name="typePost">
+                        private
+                    </label>
+                </div>
+                <h3 class="inputPost--validation"></h3>
+                <button class="main--section-add">Add New Post</button>
+            </form>
+        </div>
+        {{/if}}
+        {{#each ruesult}}
+        <div class="main--section-post">
+            <h1 class="main--section-postOwner">{{name}}</h4>
+                {{#if (ifEqual userid ../userId)}}
+                <button value="{{postid}}" class="main--section-postDelete">X</button>
+                    <h3 class="validationDeletePost"></h3>
+                {{/if}}
+                <p class="main--section-postContent">{{post}}</p>
+
+                {{#each comments}}
+                <div class="main--section-comment">
+                    <h4 class="main--section-commentOwner">{{name}}</h4>
+                    {{#if (ifEqual userid ../../userId)}}
+                    <button value="{{commentid}}" class="main--section-commentDelete">X</button>
+                    {{/if}}
+                    <p class="main--section-commentContent">{{comment}}</p>
+                </div>
+                {{/each}}
+
+                {{#if ../userName}}
+                <label for="inputComment">
+                    <input id="inputComment" class="main--section-inputComment">
+                </label>
+                <h3 class="validationComment"></h3>
+                <button value="{{postid}}" class="addComment">Add Your Comment</button>
+                {{/if}}
+        </div>
+        {{/each}}
+    </section>
+</main>

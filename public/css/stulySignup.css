@@ -1,0 +1,19 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+.passwordMeterGray{
+    background: gray;
+    width: 100px;
+    height: 20px;
+}
+.passwordMeterColor{
+    background: gray;
+    width: 100px;
+    height: 20px;
+}
+.vaildationMeterPasswordText{
+    color: black;
+    font-size: 50%;
+}
