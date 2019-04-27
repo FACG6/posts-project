@@ -3,16 +3,16 @@ const { getPosts, getComments } = require('../database/queries/selectPostAndComm
 exports.getHomePage = (request, response, next) => {
   getPosts()
     .then((res) => {
-      const fetchesCommenst = [];
+      const fetchesComment = [];
       res.rows.forEach((element) => {
         const elementClone = { ...element };
-        fetchesCommenst.push(getComments(element.postid)
+        fetchesComment.push(getComments(element.postid)
           .then((resComments) => {
             elementClone.comments = resComments.rows;
             return elementClone;
           }));
       });
-      return Promise.all(fetchesCommenst);
+      return Promise.all(fetchesComment);
     })
     .then((res) => {
       if (!request.user) {
